@@ -8,7 +8,8 @@ function Home() {
 
 
     return (
-        <div>
+        <div className='container'>
+          <h1 className='heading'>Internationalization(I18n)</h1>
           <h1 className='msg'> {i18n("welcomeMessage")}</h1>
 
           <p className='msg'>{i18n("normalMessage")}</p>
@@ -16,6 +17,8 @@ function Home() {
           <h3 className='msg'>{i18n("greetingMessage")}</h3>
 
           <h1 className='msg'>{i18n("endMessage")}</h1>
+
+          <p className='msg'>{i18n("userStatMessage", "<studentCount>", usersCount)}</p>
 
           <select className='option'
           defaultValue={localStorage.getItem("lang")} 
@@ -28,7 +31,7 @@ function Home() {
             <option value="en">English</option>
           </select>
 
-          <p className='msg'>{i18n("userStatMessage", "<studentCount>", usersCount)}</p>
+          
           
 
         </div>
